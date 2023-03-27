@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../images/Logo.svg'
 const Header = () => {
     return (
-        <div className='flex justify-between px-10 mx-10 align-middle  pt-5'>
+        <nav className='flex justify-between px-10 mx-10 align-middle  pt-5'>
             <div>
                 <img src={logo} alt="logo-img" />
             </div>
@@ -12,7 +12,7 @@ const Header = () => {
                 <a className='ml-8 text-white text-lg ' href="/Inventory">Manage Inventory</a>
                 <a className='ml-8 text-white text-lg ' href="/Login">Login</a>
             </div>
-        </div>
+        </nav>
     );
 };
 
