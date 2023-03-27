@@ -10,16 +10,23 @@ const Shop = () => {
     }, [])
     return (
 
-        <div className=' flex flex-col md:flex-row lg:flex-row mx-auto'>
+        <div className=' flex flex-col md:flex-row lg:flex-row mx-auto gap-5'>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  
-            w-full gap-5 md:w-[80%] lg:w-[80%] mt-5  mx-auto'>
+            w-full gap-3 md:w-[70%] lg:w-[70%] pt-10 mx-auto'>
                 {
                     products.map(product => <Product product={product} key={product.id} />)
                 }
 
             </div>
-            <div className=' w-full md:w-[30%] lg:[30%]'>
-                <h1>Order Summary</h1>
+            <div className=' w-full md:w-[30%] lg:[30%] pt-10  mx-auto'>
+              
+                <div className="card w-80 ml-7 bg-amber-400 text-primary-content">
+                    <div className="card-body">
+                        <h2 className="card-title">Order Summary:</h2>
+                        
+                        
+                    </div>
+                </div>
             </div>
 
         </div>
