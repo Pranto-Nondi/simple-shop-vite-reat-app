@@ -16,7 +16,7 @@ const Shop = () => {
 
         <div className=' flex flex-col md:flex-row lg:flex-row mx-auto gap-5'>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  
-            w-full gap-3 md:w-[70%] lg:w-[70%] pt-10 mx-auto'>
+            w-full gap-5 md:w-[70%] lg:w-[70%] pt-10 mx-auto rounded'>
                 {
                     products.map(product => <Product product={product}
                         addToCard={addToCard} key={product.id} />)
