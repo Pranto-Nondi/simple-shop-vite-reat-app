@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb } from '../../utilities/fakeDb';
+import Card from '../Card/Card';
 import Product from '../Product/Product';
 import './Shop.css'
 const Shop = () => {
@@ -6,6 +8,7 @@ const Shop = () => {
     const [card, setCard] = useState([]);
     const addToCard = (product) => {
         setCard([...card, product])
+        addToDb(product.id)
     }
     useEffect(() => {
         fetch(`products.json`)
@@ -23,16 +26,8 @@ const Shop = () => {
                 }
 
             </div>
-            <div className=' w-full md:w-[30%] lg:[30%] pt-10  mx-auto'>
-
-                <div className="card w-80 ml-7 bg-amber-400 text-primary-content ">
-                    <div className="card-body">
-                        <h2 className="card-title">Order Summary</h2>
-                        <p>Selected Items: {card.length}</p>
-
-
-                    </div>
-                </div>
+            <div className=' w-full md:w-[30%] lg:[30%] pt-10  mx-auto  '>
+                <Card card={card} />
             </div>
 
         </div>
